@@ -1,4 +1,7 @@
 #!/bin/bash
+
+source ./utils/utils.sh
+
 # Trigger a new instance of a workflow
 #
 # Check that we're in a bash shell
@@ -7,14 +10,10 @@ if [[ $SHELL != *"bash"* ]]; then
 fi
 
 # Step 1: Obtain your OAuth token
-# Note: Substitute these values with your own
 ACCESS_TOKEN=$(cat config/ds_access_token.txt)
 
-
 # Set up variables for full code example
-# Note: Substitute these values with your own
 account_id=$(cat config/API_ACCOUNT_ID)
-
 base_path="https://api-d.docusign.com/v1"
 
 # Construct your API headers
@@ -22,16 +21,27 @@ declare -a Headers=('--header' "Authorization: Bearer ${ACCESS_TOKEN}" \
     '--header' "Accept: application/json" \
     '--header' "Content-Type: application/json")
 
-
-response=$(mktemp /tmp/response-wftmp.XXXXXX)
-
 # Copy your workflow ID into the variable below
 # Hint: Get your workflow ID from the Maestro UI or through an API call
 workflow_id='YOUR_WORKFLOW_ID'
 
-
 # Get the trigger URL
-# Insert API call to get trigger requirements here
+response=$(mktemp /tmp/response-wftmp.XXXXXX)
+Status=$(curl -s -w "%{http_code}\n" -i --request GET "${base_path}/accounts/${account_id}/workflows/${workflow_id}/trigger-requirements" \
+    "${Headers[@]}" \
+    --output ${response})
+
+# If the status code returned is greater than 201 (OK / Accepted), display an error message with the API response.
+if [[ "$Status" -gt "201" ]]; then
+    echo ""
+    echo "Unable to get the trigger requirements of the specified workflow ${workflow_id}"
+    echo ""
+    cat $response
+    exit 0
+fi
+
+cat $response
+echo ""
 
 trigger_url=$(grep '"url":' $response | sed -n 's/.*"url": "\([^"]*\)".*/\1/p')
 decoded_trigger_url=$(echo $trigger_url | sed 's/\\u0026/\&/g')
@@ -40,6 +50,7 @@ decoded_trigger_url=$(echo $trigger_url | sed 's/\\u0026/\&/g')
 # Construct your request body with the required trigger inputs for your workflow
 # Hint: Find the structure of the trigger inputs in the response of your API call to get the trigger requirements
 request_data=$(mktemp /tmp/request-wf-001.XXXXXX)
+instance_name='New Instance'
 printf \
 '{
   "instance_name": "'"$instance_name"'",
@@ -82,18 +93,7 @@ echo "Opening a browser with the embedded workflow..."
 sleep 5
 
 # [Optional] Launch local server and embed workflow instance using the instance URL
-decoded_instance_url=$(echo "$instance_url" | sed 's/\\u0026/\&/g')
-
-
-host_url="http://localhost:8080"
-if which xdg-open &> /dev/null  ; then
-  xdg-open $host_url
-elif which open &> /dev/null    ; then
-  open $host_url
-elif which start &> /dev/null   ; then
-  start $host_url
-fi
-php ./examples/Maestro/lib/startServerForEmbeddedWorkflow.php "$decoded_instance_url"
+embedWorkflow "$decoded_instance_url"
 
 # Remove the temporary files
 rm "$request_data"
