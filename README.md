@@ -17,8 +17,8 @@ Follow the steps below to build your workflow:
 Bonus: incorporate the [Slack](https://apps-d.docusign.com/app-center/app/4a5ee6f6-2213-40e0-8ea6-b04714e2a129) or [Salesforce](https://apps-d.docusign.com/app-center/app/2d576583-520a-41e2-886b-089fefe733a1) extension app into your workflow.
 6. [Review and publish](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=iqm1698272226447.html) your workflow.
 
-### 💡Hint
 <details>
+<summary>💡Hint</summary>
 Try using a [workflow template](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=irb1736981148403.html) to get some inspiration and speed up the workflow configuration process.
 </details>
 
@@ -33,6 +33,7 @@ Prefer to work in another environment or programming language? Feel free to writ
 
 ### 💡Hint
 <details>
+<summary>💡Hint</summary>
 Check out this [how-to guide](https://developers.docusign.com/docs/maestro-api/how-to/trigger-workflow/) to understand the API calls needed to trigger a workflow.
 </details>
 
