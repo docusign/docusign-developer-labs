@@ -43,6 +43,10 @@ function authenticate() {
                 ;;
 
             Python)
+                # Ensure the requirements for Python Strategy are satisfied
+                ensurePackage "Flask"
+                ensurePackage "requests"
+
                 if isCommandAvailable "python3"; then
                     LANGUAGE_CHOICE="python3"
                     python3 -m OAuth.code_grant

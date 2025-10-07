@@ -52,5 +52,24 @@ function embedWorkflow() {
     esac
 }
 
+function ensurePackage() {
+    local package="$1"
+
+    PYTHON=$(command -v python3 || command -v python)
+
+    # If the package is not installed, install it
+    if ! "$PYTHON" -m pip show "$package" > /dev/null 2>&1; then
+        echo "Installing $package..."
+        "$PYTHON" -m pip install "$package" --quiet
+        if "$PYTHON" -m pip show "$package" > /dev/null 2>&1; then
+            echo "$package successfully installed."
+        else
+            echo "Failed to install $package."
+            exit 1
+        fi
+    fi
+}
+
 export -f isCommandAvailable
 export -f embedWorkflow
+export -f ensurePackage
