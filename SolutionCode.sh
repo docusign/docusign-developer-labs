@@ -21,14 +21,13 @@ declare -a Headers=('--header' "Authorization: Bearer ${ACCESS_TOKEN}" \
     '--header' "Accept: application/json" \
     '--header' "Content-Type: application/json")
 
-# TODO: Copy your workflow ID into the variable below
+# Copy your workflow ID into the variable below
 # Hint: Get your workflow ID from the Maestro UI or through an API call
 workflow_id='YOUR_WORKFLOW_ID'
 
-# TODO: Make a GET request to get the trigger URL of your workflow. Replace {ENTER_ENDPOINT_HERE} with the actual endpoint path
-# Hint: Check the API reference to find the endpoint
+# Get the trigger URL of your workflow
 response=$(mktemp /tmp/response-wftmp.XXXXXX)
-Status=$(curl -s -w "%{http_code}\n" -i --request GET "${base_path}/{ENTER_ENDPOINT_HERE}" \
+Status=$(curl -s -w "%{http_code}\n" -i --request GET "${base_path}/accounts/${account_id}/workflows/${workflow_id}/trigger-requirements" \
     "${Headers[@]}" \
     --output ${response})
 
@@ -49,7 +48,7 @@ trigger_url=$(grep '"url":' $response | sed -n 's/.*"url": "\([^"]*\)".*/\1/p')
 decoded_trigger_url=$(echo $trigger_url | sed 's/\\u0026/\&/g')
 
 
-# TODO: Construct your request body with the required trigger inputs for your workflow
+# Construct your request body with the required trigger inputs for your workflow
 # Hint: Find the structure of the trigger inputs in the response of your API call to get the trigger requirements
 request_data=$(mktemp /tmp/request-wf-001.XXXXXX)
 instance_name='New Instance'
@@ -62,9 +61,9 @@ printf \
 
 
 response=$(mktemp /tmp/response-wftmp.XXXXXX)
-# TODO:Make a POST request to the correct trigger URL for your workflow instance  
-# Hint: Replace {ENTER_URL_HERE} with ${decoded_trigger_url} from the previous API call
-Status=$(curl -s -w "%{http_code}\n" -i --request POST {ENTER_URL_HERE} \
+# The ${decoded_trigger_url} variable is extracted from the response from a previous API call  
+# to the Workflows: getWorkflowTriggerRequirements endpoint.
+Status=$(curl -s -w "%{http_code}\n" -i --request POST ${decoded_trigger_url} \
     "${Headers[@]}" \
     --data-binary @${request_data} \
     --output ${response})
@@ -79,7 +78,6 @@ echo "Response:"
 cat $response
 echo ""
 
-# Extract and decode the instance URL from the response
 instance_url=$(grep '"instance_url":' $response | sed -n 's/.*"instance_url": "\([^"]*\)".*/\1/p')
 decoded_instance_url=$(echo $instance_url | sed 's/\\u0026/\&/g')
 echo "$decoded_instance_url" > config/INSTANCE_URL
