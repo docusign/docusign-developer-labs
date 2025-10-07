@@ -6,7 +6,7 @@ Before you begin, create a free [Docusign developer account](https://www.docusig
 
 ## Lab 1: Build a Maestro Workflow
 
-For your first task, you'll need to build a [Maestro Workflow](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=pps1696973636517.html) in the Docusign UI.
+For your first task, you'll need to build a <a href="https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=pps1696973636517.html">Maestro Workflow</a> in the Docusign UI.
 
 Follow the steps below to build your workflow:
 1. In your developer account, select the **Agreements** tab. Then navigate to **Maestro Workflows** in the left menu.
