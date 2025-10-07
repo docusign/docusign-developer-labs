@@ -31,7 +31,6 @@ After publishing your workflow, use the [Maestro API](https://developers.docusig
 
 Prefer to work in another environment or programming language? Feel free to write your own code, or use [Postman](https://developers.docusign.com/tools/postman/), to call the Maestro API and trigger a workflow.
 
-### 💡Hint
 <details>
 <summary>💡Hint</summary>
 Check out this [how-to guide](https://developers.docusign.com/docs/maestro-api/how-to/trigger-workflow/) to understand the API calls needed to trigger a workflow.
