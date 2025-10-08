@@ -39,7 +39,7 @@ To run the example program, follow the steps below:
     - Update the value of `INTEGRATION_KEY` with the value of your new integration key, with double quotes around the key.
     - Update the value of `SECRET_KEY` with the value of the secret key in your IK.
     - Copy your **API Account ID** from the apps and keys page and paste it into the value of `TARGET_ACCOUNT_ID`.
-    - Add the following redirect URI to your IK.
+    - Add the following redirect URI to your IK: `http://localhost:8080/authorization-code/callback`.
 3. Copy the ID of your workflow into the variable in the `TriggerWorkflow.sh` file on line 26.
 4. Look for the `TODO` comments in the `TriggerWorkflow.sh` file indicating which API calls need to be filled in. Check the [Maestro API reference](https://developers.docusign.com/docs/maestro-api/reference/) to determine which API calls you need. Getting stuck? Ask the Docusign Developer AI Assistant or check the hint above.
 5. Navigate to the cloned repo and run the program with the following command: `bash launcher.sh`.
