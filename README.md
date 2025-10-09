@@ -54,3 +54,15 @@ If you chose another method:
 If you chose not to use the example code and made the API calls through another method, you should have received a response including the instance_url property. Go to that URL to see the workflow instance in a new browser tab.
 
 Show your API response to the lab staff to claim your swag!
+
+### 🛠️ Dreamforce 25 | Share Your Build
+
+Built something cool in the **Docusign Developer Lab** during Dreamforce? Show us what you made.
+
+Post in the [Developer Forum](https://community.docusign.com/developer-59) with a quick summary or screenshot of your workflow, or a code snippet highlighting how you triggered it—and **tag it “DevLab25”** so we can find it.
+
+🎁 The developers of the 10 most impactful builds will each receive a **$150 Loop & Tie** gift of their choice.
+
+Terms & conditions apply—[see this post for details](https://community.docusign.com/general-74/docusign-developer-lab-at-dreamforce25-share-your-build-25685).
+Let’s see what you built! 💥
+
