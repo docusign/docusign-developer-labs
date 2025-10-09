@@ -58,7 +58,7 @@ If you chose not to use the example code and made the API calls through another 
 
 Show your API response to the lab staff to claim your swag!
 
-### 🛠️ Dreamforce 25 | Share Your Build
+### 🛠️ Share Your Build
 
 Built something cool in the **Docusign Developer Lab** during Dreamforce? Show us what you made.
 
