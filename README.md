@@ -2,7 +2,7 @@
 
 Before you begin, create a free [Docusign developer account](https://www.docusign.com/developers/sandbox).
 
-✨Install the [Docusign Developer AI Assistant for VS Code (Beta)](https://developers.docusign.com/tools/ai-assistant-vs-code/) to get AI-powered answers to your questions along the way. You can use the assistant to ask Docusign-related questions, create integration keys, and generate code.
+**Optional**: ✨Install the [Docusign Developer AI Assistant for VS Code (Beta)](https://developers.docusign.com/tools/ai-assistant-vs-code/) to get AI-powered answers to your questions along the way. You can use the assistant to ask Docusign-related questions, create integration keys, and generate code.
 
 ## Lab 1: Build a Maestro Workflow
 
@@ -25,7 +25,9 @@ Once your workflow has been published, you’re ready to test it out. Navigate t
 
 ## Lab 2: Trigger your workflow through the API
 
-After publishing your workflow, use the [Maestro API](https://developers.docusign.com/docs/maestro-api/maestro101/) to trigger it. The skeleton code in this repo gives you a place to start using a Bash shell script and curl to make the API calls.
+After publishing your workflow, use the [Maestro API](https://developers.docusign.com/docs/maestro-api/maestro101/) to trigger it. 
+
+The skeleton code in this repo gives you a place to start using a Bash shell script and curl to make the API calls. To run this code, you will need to be able to run a bash script, and use either PHP or Python for authentication.
 
 Prefer to work in another environment or programming language? Feel free to write your own code, or use [Postman](https://developers.docusign.com/tools/postman/), to call the Maestro API and trigger a workflow.
 
