@@ -35,16 +35,17 @@ Prefer to work in another environment or programming language? Feel free to writ
 Check out this [how-to guide](https://developers.docusign.com/docs/maestro-api/how-to/trigger-workflow/) to understand the API calls needed to trigger a workflow.
 
 To run the example program, follow the steps below:
-1. Log into your developer account and create a new [integration key](https://developers.docusign.com/platform/build-integration/) (IK) on the [Apps and Keys](https://admindemo.docusign.com/authenticate?goTo=appsAndKeys) page.
-2. Configure your IK and config file by following the steps below:
+1. Clone this GitHub repository.
+2. Log into your developer account and create a new [integration key](https://developers.docusign.com/platform/build-integration/) (IK) on the [Apps and Keys](https://admindemo.docusign.com/authenticate?goTo=appsAndKeys) page.
+3. Configure your IK and config file by following the steps below:
     - Copy the settings.example.txt file into a new file named `settings.txt`.
     - Update the value of `INTEGRATION_KEY` with the value of your new integration key, with double quotes around the key.
     - Update the value of `SECRET_KEY` with the value of the secret key in your IK.
     - Copy your **API Account ID** from the apps and keys page and paste it into the value of `TARGET_ACCOUNT_ID`.
     - Add the following redirect URI to your IK: `http://localhost:8080/authorization-code/callback`.
-3. Copy the ID of your workflow into the variable in the `TriggerWorkflow.sh` file on line 26.
-4. Look for the `TODO` comments in the `TriggerWorkflow.sh` file indicating which API calls need to be filled in. Check the [Maestro API reference](https://developers.docusign.com/docs/maestro-api/reference/) to determine which API calls you need. Getting stuck? Ask the Docusign Developer AI Assistant or check the hint above.
-5. Navigate to the cloned repo and run the program with the following command: `bash launcher.sh`.
+4. Copy the ID of your workflow into the variable in the `TriggerWorkflow.sh` file on line 26.
+5. Look for the `TODO` comments in the `TriggerWorkflow.sh` file indicating which API calls need to be filled in. Check the [Maestro API reference](https://developers.docusign.com/docs/maestro-api/reference/) to determine which API calls you need. Getting stuck? Ask the Docusign Developer AI Assistant or check the hint above.
+6. Navigate to the cloned repo and run the program with the following command: `bash launcher.sh`.
 
 ### ✅ Check your work
 If you used our skeleton code:
