@@ -14,6 +14,7 @@ Follow the steps below to build your workflow:
 3. Use the **New Canvas** option to create a workflow from scratch, or try one of the other options to create a workflow from a template.
 4. Select a [start method](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=ztb1727892686033.html) for your workflow. Choose **From an API call** if you plan to complete [Lab 2](#lab-2-trigger-your-workflow-through-the-api).
 5. Build out your workflow with the [agreement process steps](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=afu1730332596907.html) that fit your desired use case. Your workflow can be as simple or complex as you like. Feel free to get creative!
+    - Upload the SampleESignTemplate.json file from this repo to your account to create a new [eSignature template](https://support.docusign.com/s/document-item?bundleId=xry1643227563338&topicId=xoq1578456627577.html) that you can use in your workflow.
 Bonus: incorporate the [Slack](https://apps-d.docusign.com/app-center/app/4a5ee6f6-2213-40e0-8ea6-b04714e2a129) or [Salesforce](https://apps-d.docusign.com/app-center/app/2d576583-520a-41e2-886b-089fefe733a1) extension app into your workflow.
 6. [Review and publish](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=iqm1698272226447.html) your workflow.
 
