@@ -16,7 +16,6 @@ Follow the steps below to build your workflow:
 5. Build out your workflow with the [agreement process steps](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=afu1730332596907.html) that fit your desired use case. Your workflow can be as simple or complex as you like. Feel free to get creative!
     - Upload the SampleESignTemplate.json file from this repo to your account to create a new [eSignature template](https://support.docusign.com/s/document-item?bundleId=xry1643227563338&topicId=xoq1578456627577.html) that you can use in your workflow.
     - Upload the SampleWebFormConfig.json file from this repo to your account to create a new web form that you can use in your workflow.
-Bonus: incorporate the [Slack](https://apps-d.docusign.com/app-center/app/4a5ee6f6-2213-40e0-8ea6-b04714e2a129) or [Salesforce](https://apps-d.docusign.com/app-center/app/2d576583-520a-41e2-886b-089fefe733a1) extension app into your workflow.
 6. [Review and publish](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=iqm1698272226447.html) your workflow.
 
 ### 💡Hint
@@ -53,21 +52,10 @@ To run the example program, follow the steps below:
 If you used our skeleton code:
 If your program is running correctly, a browser window should open with your workflow embedded in it. The API responses should print in the terminal, including a response with an instance_url property. Go to that URL to see the workflow instance in a new browser tab.
 
-Show this browser to the lab staff to claim your swag!
+Show this browser to the lab staff!
 
 If you chose another method:
 If you chose not to use the example code and made the API calls through another method, you should have received a response including the instance_url property. Go to that URL to see the workflow instance in a new browser tab.
 
-Show your API response to the lab staff to claim your swag!
-
-### 🛠️ Share Your Build
-
-Built something cool in the **Docusign Developer Lab** during Dreamforce? Show us what you made.
-
-Post in the [Developer Forum](https://community.docusign.com/developer-59) with a quick summary or screenshot of your workflow, or a code snippet highlighting how you triggered it—and **tag it “DevLab25”** so we can find it.
-
-🎁 The developers of the 10 most impactful builds will each receive a **$150 Loop & Tie** gift of their choice.
-
-Terms & conditions apply—[see this post for details](https://community.docusign.com/general-74/docusign-developer-lab-at-dreamforce25-share-your-build-25685).
-Let’s see what you built! 💥
+Show your API response to the lab staff!
 
