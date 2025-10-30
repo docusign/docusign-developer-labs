@@ -22,7 +22,7 @@ Follow the steps below to build your workflow:
 Try using a [workflow template](https://support.docusign.com/s/document-item?bundleId=yff1696971835267&topicId=irb1736981148403.html) to get some inspiration and speed up the workflow configuration process.
 
 ### ✅ Validate your work
-Once your workflow has been published, you’re ready to test it out. Navigate to **Maestro Workflows** under the **Agreements** tab where you began the lab. Select the three-dot menu for your published workflow and choose **Run Workflow**. Complete the workflow steps and show your work to the lab staff to claim your swag!
+Once your workflow has been published, you’re ready to test it out. Navigate to **Maestro Workflows** under the **Agreements** tab where you began the lab. Select the three-dot menu for your published workflow and choose **Run Workflow**. Complete the workflow steps and show your work to the lab staff or proceed to lab 2!
 
 ## Lab 2: Trigger your workflow through the API
 
