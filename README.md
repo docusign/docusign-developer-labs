@@ -28,7 +28,7 @@ Once your workflow has been published, you’re ready to test it out. Navigate t
 
 After publishing your workflow, use the [Maestro API](https://developers.docusign.com/docs/maestro-api/maestro101/) to trigger it. 
 
-The skeleton code in this repo gives you a place to start using a Bash shell script and curl to make the API calls. To run this code, you will need to be able to run a bash script, and use either PHP or Python for authentication.
+The skeleton code in this repo gives you a place to start using a Bash shell script and curl to make the API calls. To run this code, you will need to be able to run a bash script, and use either PHP (8.3.36 or later) or Python for authentication.
 
 Prefer to work in another environment or programming language? Feel free to write your own code, or use [Postman](https://developers.docusign.com/tools/postman/), to call the Maestro API and trigger a workflow.
 
